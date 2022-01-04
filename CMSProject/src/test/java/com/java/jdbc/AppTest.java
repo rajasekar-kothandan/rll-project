@@ -1,6 +1,8 @@
-package com.java.cms;
+package com.java.jdbc;
 
 import org.junit.Test;
+
+import com.java.cms.App;
 
 public class AppTest {
 

@@ -1,13 +1,13 @@
 package com.java.cms;
 
 public class Restaurant {
-
+	
 	private int rid;
-	private String rname;
-	private String city;
-	private String branch;
-	private String email;
-	private String contactNo;
+	private String rname;;
+	private String City;
+	private String Branch;
+	private String Email;
+	private String ContactNo;
 	public int getRid() {
 		return rid;
 	}
@@ -21,34 +21,34 @@ public class Restaurant {
 		this.rname = rname;
 	}
 	public String getCity() {
-		return city;
+		return City;
 	}
 	public void setCity(String city) {
-		this.city = city;
+		City = city;
 	}
 	public String getBranch() {
-		return branch;
+		return Branch;
 	}
 	public void setBranch(String branch) {
-		this.branch = branch;
+		Branch = branch;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 	public String getContactNo() {
-		return contactNo;
+		return ContactNo;
 	}
 	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
+		ContactNo = contactNo;
 	}
 	@Override
 	public String toString() {
-		return "Restaurant [rid=" + rid + ", rname=" + rname + ", city=" + city + ", branch=" + branch + ", email="
-				+ email + ", contactNo=" + contactNo + "]";
+		return "Restaurant [rid=" + rid + ", rname=" + rname + ", City=" + City + ", Branch=" + Branch + ", Email="
+				+ Email + ", ContactNo=" + ContactNo + "]";
 	}
 	
-	
+
 }

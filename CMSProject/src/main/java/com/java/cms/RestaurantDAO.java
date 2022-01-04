@@ -13,15 +13,15 @@ public class RestaurantDAO {
 	PreparedStatement pst;
 	public List<Restaurant> showRestaurant() throws ClassNotFoundException, SQLException {
 		connection = ConnectionHelper.getConnection();
-		String cmd = "select * from restraunt";
+		String cmd = "select * from restaurant";
 		pst = connection.prepareStatement(cmd);
 		ResultSet rs = pst.executeQuery();
 		List<Restaurant> restaurantList = new ArrayList<Restaurant>();
 		Restaurant restaurant = null;
 		while(rs.next()) {
 			restaurant = new Restaurant();
-			restaurant.setRid(rs.getInt("rid"));
-			restaurant.setRname(rs.getString("rname"));
+			restaurant.setRid(rs.getInt("RESTAURANTID"));
+			restaurant.setRname(rs.getString("RESTAURANTNAME"));
 			restaurant.setCity(rs.getString("city"));
 			restaurant.setBranch(rs.getString("branch"));
 			restaurant.setEmail(rs.getString("email"));
@@ -33,15 +33,15 @@ public class RestaurantDAO {
 	
 	public Restaurant searchRestaurant(int restaurantId) throws ClassNotFoundException, SQLException {
 		connection = ConnectionHelper.getConnection();
-		String cmd = "select * from restraunt where rid=?";
+		String cmd = "select * from restaurant where RESTAURANTID=?";
 		pst = connection.prepareStatement(cmd);
 		pst.setInt(1, restaurantId);
 		ResultSet rs = pst.executeQuery();
 		Restaurant restaurant = null;
 		if(rs.next()) {
 			restaurant = new Restaurant();
-			restaurant.setRid(rs.getInt("rid"));
-			restaurant.setRname(rs.getString("rname"));
+			restaurant.setRid(rs.getInt("RESTAURANTID"));
+			restaurant.setRname(rs.getString("RESTAURANTNAME"));
 			restaurant.setCity(rs.getString("city"));
 			restaurant.setBranch(rs.getString("branch"));
 			restaurant.setEmail(rs.getString("email"));
